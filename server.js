@@ -47,3 +47,5 @@ app.delete("/favorites/:id", (req, res) => {
 // app.listen(PORT, () => {
 //     console.log(`API executant-se a http://localhost:${PORT}`);
 // }); 
+
+module.exports = app;
