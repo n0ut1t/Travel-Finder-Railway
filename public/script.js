@@ -59,7 +59,7 @@ async function searchCountry() {
 
 async function addFavorite(country) {
 
-    await fetch("http://localhost:3000/favorites", {
+    await fetch("https://travebweb.vercel.app/favorites", {
 
         method: "POST",
 
@@ -76,7 +76,7 @@ async function addFavorite(country) {
 
 async function loadFavorites() {
 
-    const response = await fetch("http://localhost:3000/favorites");
+    const response = await fetch("https://travebweb.vercel.app/favorites");
 
     const data = await response.json();
 
@@ -99,7 +99,7 @@ async function loadFavorites() {
 
 async function deleteFavorite(id) {
 
-    await fetch(`http://localhost:3000/favorites/${id}`, {
+    await fetch(`https://travebweb.vercel.app/favorites/${id}`, {
         method: "DELETE"
     });
 

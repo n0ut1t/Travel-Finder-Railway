@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-const PORT = 3000;
+// const PORT = 3000;
 
 app.use(cors());
 app.use(express.json());
@@ -17,7 +17,7 @@ app.get("/favorites", (req, res) => {
 });
 
 app.post("/favorites", (req, res) => {
-  const countryName = req.body.country;
+    const countryName = req.body.country;
 
     const exsiste = favorites.some(f => f.country === countryName);
 
@@ -44,6 +44,6 @@ app.delete("/favorites/:id", (req, res) => {
     res.json({ message: "Destinació eliminada" });
 });
 
-app.listen(PORT, () => {
-    console.log(`API executant-se a http://localhost:${PORT}`);
-}); 
+// app.listen(PORT, () => {
+//     console.log(`API executant-se a http://localhost:${PORT}`);
+// }); 
